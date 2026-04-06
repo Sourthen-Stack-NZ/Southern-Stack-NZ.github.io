@@ -403,17 +403,10 @@
 
   // Initialize form functionality
   document.addEventListener('DOMContentLoaded', ErrorBoundary.wrap(() => {
-    const serviceSelect = document.getElementById('service');
-    const otherField = document.getElementById('other-field');
     const form = document.getElementById('interest-form');
     const btn = document.getElementById('submit-btn');
     const formInner = document.getElementById('form-inner');
     const successState = document.getElementById('success-state');
-
-    // Service selection handler
-    serviceSelect.addEventListener('change', function () {
-      otherField.style.display = this.value === 'other' ? 'block' : 'none';
-    });
 
     // Real-time validation
     const inputs = document.querySelectorAll('input, select, textarea');
