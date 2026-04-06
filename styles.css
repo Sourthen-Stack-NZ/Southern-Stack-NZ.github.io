@@ -46,7 +46,8 @@ nav {
   border-bottom: 1px solid rgba(33, 118, 199, 0.15);
 }
 .nav-logo img {
-  height: 46px;
+  height: 62px;
+  max-width: 240px;
   width: auto;
   display: block;
 }
@@ -402,7 +403,8 @@ footer {
   background: var(--brand-surface);
 }
 footer .footer-logo img {
-  height: 40px;
+  height: 54px;
+  max-width: 320px;
   width: auto;
   display: block;
   opacity: 0.95;
