@@ -70,14 +70,15 @@
   <link rel="icon" type="image/png" href="ss-png.png" />
   <link rel="apple-touch-icon" href="ss-png.png" />
 
-  <!-- Cache Control -->
-  <meta http-equiv="Cache-Control" content="public, max-age=3600" />
-  <meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
+  <!-- Theme color -->
+  <meta name="theme-color" content="#1a4f30" />
 
   <!-- Preload critical resources -->
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="dns-prefetch" href="//web3forms.com" />
 </head>
 <body>
@@ -91,7 +92,7 @@
 </nav>
 
 <!-- Progress Indicator -->
-<div class="progress-container" id="progress-container" style="display: none;">
+<div class="progress-container" id="progress-container">
   <div class="progress-bar" id="progress-bar"></div>
 </div>
 
@@ -171,35 +172,35 @@
         <form id="interest-form">
           <input type="hidden" name="access_key" value="11d2fe1e-64de-4c65-8075-51b23cd0cf21" />
           <input type="hidden" name="subject" value="New Interest Registration" />
-          <input type="checkbox" name="botcheck" style="display:none" />
+          <input type="checkbox" name="botcheck" hidden />
 
           <div class="field-row-3">
             <div class="field">
               <label for="first">First name</label>
-              <input type="text" id="first" name="first_name" placeholder="Jane" required />
+              <input type="text" id="first" name="first_name" placeholder="Jane" required autocomplete="given-name" />
               <div class="field-message"></div>
             </div>
             <div class="field">
               <label for="last">Last name</label>
-              <input type="text" id="last" name="last_name" placeholder="Smith" required />
+              <input type="text" id="last" name="last_name" placeholder="Smith" required autocomplete="family-name" />
               <div class="field-message"></div>
             </div>
             <div class="field">
               <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
               <div class="field-message"></div>
             </div>
           </div>
 
           <div class="field-row-3">
             <div class="field">
-              <label for="phone">Phone <span style="font-weight:400;color:var(--muted-light)">(optional)</span></label>
-              <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" />
+              <label for="phone">Phone <span class="label-optional">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" autocomplete="tel" />
               <div class="field-message"></div>
             </div>
             <div class="field">
-              <label for="company">Company <span style="font-weight:400;color:var(--muted-light)">(optional)</span></label>
-              <input type="text" id="company" name="company" placeholder="Acme Ltd" />
+              <label for="company">Company <span class="label-optional">(optional)</span></label>
+              <input type="text" id="company" name="company" placeholder="Acme Ltd" autocomplete="organization" />
               <div class="field-message"></div>
             </div>
             <div class="field">
@@ -216,9 +217,9 @@
             </div>
           </div>
 
-          <div class="field">
+          <div class="field" id="other-service-field">
             <label for="other-service">Please describe what you need</label>
-            <input type="text" id="other-service" name="other_service" placeholder="Tell us what you're looking for..." />
+            <input type="text" id="other-service" name="other_service" placeholder="Tell us what you're looking for..." autocomplete="off" />
             <div class="field-message"></div>
           </div>
 
@@ -228,7 +229,7 @@
             <div class="field-message"></div>
           </div>
 
-          <div class="h-captcha" data-captcha="true" style="margin-top:0.75rem"></div>
+          <div class="h-captcha" data-captcha="true"></div>
 
           <button type="submit" class="submit-btn" id="submit-btn">
             Register my interest →
@@ -243,7 +244,7 @@
         </div>
         <h3>Thank you!</h3>
         <p>Your interest has been registered. We'll review your details and reply within <strong>24 hours</strong>.</p>
-        <p style="margin-top:0.25rem;font-size:0.825rem">Keep an eye on your inbox — we look forward to connecting with you.</p>
+        <p class="success-note">Keep an eye on your inbox — we look forward to connecting with you.</p>
       </div>
     </div>
   </div>
@@ -300,6 +301,8 @@
     if (!errorDiv) {
       errorDiv = document.createElement('div');
       errorDiv.id = 'global-error';
+      errorDiv.setAttribute('role', 'alert');
+      errorDiv.setAttribute('aria-live', 'assertive');
       errorDiv.style.cssText = `
         position: fixed;
         top: 80px;
@@ -407,19 +410,33 @@
     const btn = document.getElementById('submit-btn');
     const formInner = document.getElementById('form-inner');
     const successState = document.getElementById('success-state');
+    const serviceSelect = document.getElementById('service');
+    const otherServiceField = document.getElementById('other-service-field');
+
+    if (serviceSelect && otherServiceField) {
+      serviceSelect.addEventListener('change', function () {
+        const showOther = this.value === 'other';
+        otherServiceField.style.display = showOther ? 'block' : 'none';
+        if (!showOther) {
+          const otherInput = otherServiceField.querySelector('input');
+          if (otherInput) otherInput.value = '';
+        }
+      });
+    }
 
     // Real-time validation
     const inputs = document.querySelectorAll('input, select, textarea');
     inputs.forEach(input => {
       input.addEventListener('blur', () => {
         const field = input.closest('.field');
-        validateField(field);
+        if (field) {
+          validateField(field);
+        }
       });
 
       input.addEventListener('input', () => {
         const field = input.closest('.field');
-        // Clear error state on input
-        if (field.classList.contains('error')) {
+        if (field && field.classList.contains('error')) {
           validateField(field);
         }
       });
