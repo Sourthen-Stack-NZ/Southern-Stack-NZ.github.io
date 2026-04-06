@@ -12,6 +12,10 @@
   --accent-vivid: #226040;
   --accent-light: #e4efe8;
   --accent-glow: rgba(26, 79, 48, 0.12);
+  --brand-dark: #1a5fa8;
+  --brand-mid: #2176c7;
+  --brand-light: #5aabdc;
+  --brand-surface: rgba(33, 118, 199, 0.08);
   --panel: #0d2318;
   --panel-mid: #112d1e;
   --white: #ffffff;
@@ -36,13 +40,13 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.9rem 2.5rem;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(26, 95, 168, 0.08);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  border-bottom: 1px solid rgba(33, 118, 199, 0.15);
 }
 .nav-logo img {
-  height: 38px;
+  height: 46px;
   width: auto;
   display: block;
 }
@@ -388,20 +392,20 @@ textarea { resize: vertical; min-height: 84px; }
 
 /* ── FOOTER ── */
 footer {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(33, 118, 199, 0.18);
   padding: 1.75rem 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.775rem;
-  color: var(--muted-light);
-  background: var(--white);
+  color: var(--ink-soft);
+  background: var(--brand-surface);
 }
 footer .footer-logo img {
-  height: 30px;
+  height: 40px;
   width: auto;
   display: block;
-  opacity: 0.75;
+  opacity: 0.95;
 }
 footer .footer-logo img:hover {
   opacity: 1;
