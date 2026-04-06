@@ -24,7 +24,10 @@
   --radius-lg: 20px;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -32,7 +35,9 @@ body {
   color: var(--ink);
   font-size: 16px;
   line-height: 1.6;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ── NAV ── */
@@ -83,7 +88,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 62px;
+  padding: 5rem 1.25rem 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -96,8 +101,8 @@ nav {
   pointer-events: none;
 }
 .hero-content {
-  max-width: 720px;
-  padding: 5rem;
+  width: min(100%, 720px);
+  padding: clamp(2rem, 4vw, 4rem);
   position: relative;
   z-index: 1;
 }
@@ -113,6 +118,7 @@ nav {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s, transform 0.12s;
+  margin-top: 1.75rem;
 }
 .hero-cta:hover {
   background: var(--accent-vivid);
@@ -221,7 +227,8 @@ label {
 }
 input, select, textarea {
   width: 100%;
-  padding: 0.625rem 0.875rem;
+  min-width: 0;
+  padding: 0.65rem 0.9rem;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
   font-family: 'DM Sans', sans-serif;
@@ -270,7 +277,7 @@ textarea { resize: vertical; min-height: 84px; }
 
 .field-row-3 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -578,35 +585,51 @@ footer .footer-brand {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .hero { padding-top: 52px; }
-  .hero-content { padding: 3.5rem 2rem 3rem; }
-  .trust-row { flex-direction: row; flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-  .services { padding: 5rem 2rem; }
-  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
-  footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; }
-  .field-row-3 { grid-template-columns: 1fr; }
-  nav { padding: 0.875rem 1.5rem; }
+  .hero {
+    padding: 4rem 1.5rem 2rem;
+  }
+  .hero-content {
+    padding: clamp(1.75rem, 4vw, 3rem);
+  }
+  .trust-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+  .services {
+    padding: 4rem 1.5rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  footer {
+    padding: 1.5rem 1.5rem;
+    flex-direction: column;
+  }
+  .field-row-3 {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    padding: 0.85rem 1.25rem;
+  }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   nav {
     padding: 0.75rem 1rem;
   }
-  h1 {
-    font-size: 2.2rem;
-  }
   .hero {
-    padding-top: 50px;
-    min-height: calc(100vh - 50px);
+    padding: 3.5rem 1rem 1.5rem;
   }
   .hero-content {
-    padding: 2rem 1rem 1.5rem;
+    padding: 1.5rem 0.9rem 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
   }
   .hero-body {
-    max-width: none;
-  }
-  .trust-row {
-    gap: 0.5rem;
+    max-width: 100%;
   }
   .trust-item {
     font-size: 0.78rem;
@@ -616,9 +639,9 @@ footer .footer-brand {
     padding: 1.5rem 1rem;
   }
   .services {
-    padding: 3.25rem 1rem;
+    padding: 3rem 1rem;
   }
   footer {
-    padding: 1rem;
+    padding: 1rem 1rem;
   }
 }
