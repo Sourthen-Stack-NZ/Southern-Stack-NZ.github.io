@@ -93,7 +93,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
+  <div class="hero-content" data-reveal data-reveal-delay="0">
     <div class="eyebrow">Freelance technical consulting &middot; New Zealand</div>
     <h1>The technical partner your <em>business actually needs</em></h1>
     <p class="hero-body">
@@ -120,12 +120,48 @@
         Free initial consultation
       </div>
     </div>
+    <a href="#register" class="hero-cta">Register your interest</a>
   </div>
+</section>
 
-  <div class="hero-right" id="register">
-    <div class="form-card">
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-inner">
+    <div class="services-header" data-reveal data-reveal-delay="0">
+      <div class="eyebrow">What I offer</div>
+      <h2>Services tailored to your business</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-reveal data-reveal-delay="100">
+        <div class="service-num">01</div>
+        <h3>Software Development</h3>
+        <p>Custom web applications and internal tools built in Node.js and modern web technologies. Practical software that solves real operational problems.</p>
+      </div>
+      <div class="service-card" data-reveal data-reveal-delay="200">
+        <div class="service-num">02</div>
+        <h3>Systems Analysis &amp; Consulting</h3>
+        <p>I dig into how your business actually works, identify the friction points, and recommend technology solutions that fit — without overcomplicating things.</p>
+      </div>
+      <div class="service-card" data-reveal data-reveal-delay="300">
+        <div class="service-num">03</div>
+        <h3>Project Planning &amp; Management</h3>
+        <p>Technical projects that stay on track. I bridge the gap between developers and decision-makers, keeping things moving and stakeholders informed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="register-section" id="register">
+  <div class="register-inner">
+    <div class="register-header" data-reveal data-reveal-delay="0">
+      <div class="eyebrow">Register your interest</div>
+      <h2>Tell us about your project</h2>
+      <p>Share a little detail so I can respond with the most relevant advice and next steps.</p>
+    </div>
+
+    <div class="form-card" data-reveal data-reveal-delay="100">
       <div id="form-inner">
-        <h2>Register your interest</h2>
         <p>Tell us a little about yourself and what you're looking for.</p>
 
         <form id="interest-form">
@@ -133,7 +169,7 @@
           <input type="hidden" name="subject" value="New Interest Registration" />
           <input type="checkbox" name="botcheck" style="display:none" />
 
-          <div class="field-row">
+          <div class="field-row-3">
             <div class="field">
               <label for="first">First name</label>
               <input type="text" id="first" name="first_name" placeholder="Jane" required />
@@ -144,15 +180,14 @@
               <input type="text" id="last" name="last_name" placeholder="Smith" required />
               <div class="field-message"></div>
             </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              <div class="field-message"></div>
+            </div>
           </div>
 
-          <div class="field">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-            <div class="field-message"></div>
-          </div>
-
-          <div class="field-row">
+          <div class="field-row-3">
             <div class="field">
               <label for="phone">Phone <span style="font-weight:400;color:var(--muted-light)">(optional)</span></label>
               <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" />
@@ -163,21 +198,21 @@
               <input type="text" id="company" name="company" placeholder="Acme Ltd" />
               <div class="field-message"></div>
             </div>
+            <div class="field">
+              <label for="service">What are you interested in?</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option>Software Development</option>
+                <option>Systems Analysis &amp; Consulting</option>
+                <option>Project Planning &amp; Management</option>
+                <option>Business Operations &amp; Process</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="field-message"></div>
+            </div>
           </div>
 
           <div class="field">
-            <label for="service">What are you interested in?</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option>Software Development</option>
-              <option>Systems Analysis &amp; Consulting</option>
-              <option>Project Planning &amp; Management</option>
-              <option>Business Operations &amp; Process</option>
-              <option value="other">Other</option>
-            </select>
-            <div class="field-message"></div>
-          </div>
-          <div class="field" id="other-field" style="display:none">
             <label for="other-service">Please describe what you need</label>
             <input type="text" id="other-service" name="other_service" placeholder="Tell us what you're looking for..." />
             <div class="field-message"></div>
@@ -192,7 +227,7 @@
           <div class="h-captcha" data-captcha="true" style="margin-top:0.75rem"></div>
 
           <button type="submit" class="submit-btn" id="submit-btn">
-            Register my interest &rarr;
+            Register my interest →
           </button>
           <p class="form-note">No spam. Unsubscribe anytime.</p>
         </form>
@@ -210,40 +245,31 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
-  <div class="services-inner">
-    <div class="services-header">
-      <div class="eyebrow">What I offer</div>
-      <h2>Services tailored to your business</h2>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-num">01</div>
-        <h3>Software Development</h3>
-        <p>Custom web applications and internal tools built in Node.js and modern web technologies. Practical software that solves real operational problems.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">02</div>
-        <h3>Systems Analysis &amp; Consulting</h3>
-        <p>I dig into how your business actually works, identify the friction points, and recommend technology solutions that fit — without overcomplicating things.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-num">03</div>
-        <h3>Project Planning &amp; Management</h3>
-        <p>Technical projects that stay on track. I bridge the gap between developers and decision-makers, keeping things moving and stakeholders informed.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><img src="ss-png.png" alt="Southern Stack - IT & Software Consulting" /></div>
+  <div class="footer-logo"><img src="ss-og-trans.png" alt="Southern Stack - IT & Software Consulting" /></div>
   <div>&copy; 2026 Southern Stack Ltd. All rights reserved.</div>
 </footer>
 
 <script>
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const target = entry.target;
+      const delay = target.dataset.revealDelay;
+      if (delay) {
+        target.style.transitionDelay = `${delay}ms`;
+      }
+      target.classList.add('revealed');
+      revealObserver.unobserve(target);
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('[data-reveal]').forEach((el) => {
+    el.classList.add('revealer');
+    revealObserver.observe(el);
+  });
+
   // Error boundary wrapper
   class ErrorBoundary {
     static wrap(fn) {
