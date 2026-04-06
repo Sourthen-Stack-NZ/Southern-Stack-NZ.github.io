@@ -1,0 +1,56 @@
+/*
+  # Main pages - cache for 15 minutes (allows quick updates)
+  Cache-Control: public, max-age=900
+  # Enable compression
+  Content-Encoding: gzip
+
+# HTML files - cache for 15 minutes
+/*.html
+  Cache-Control: public, max-age=900
+
+# CSS files - cache for 1 hour (frequent updates)
+/*.css
+  Cache-Control: public, max-age=3600
+
+# JavaScript files - cache for 1 hour (frequent updates)
+/*.js
+  Cache-Control: public, max-age=3600
+
+# Images - cache for 1 week (moderate updates)
+/*.png
+  Cache-Control: public, max-age=604800
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.jpeg
+  Cache-Control: public, max-age=604800
+/*.webp
+  Cache-Control: public, max-age=604800
+/*.svg
+  Cache-Control: public, max-age=604800
+
+# Fonts - cache for 1 month (rarely change)
+/*.woff2
+  Cache-Control: public, max-age=2592000
+/*.woff
+  Cache-Control: public, max-age=2592000
+/*.ttf
+  Cache-Control: public, max-age=2592000
+
+# XML files (sitemap) - cache for 1 hour
+/*.xml
+  Cache-Control: public, max-age=3600
+
+# Text files - cache for 1 hour
+/*.txt
+  Cache-Control: public, max-age=3600
+
+# Security headers
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Content Security Policy (adjust as needed)
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://web3forms.com https://hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com; frame-src https://hcaptcha.com https://*.hcaptcha.com;

@@ -2,10 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="canonical" href="https://www.southernstack.co.nz" />
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Southern Stack",
+    "description": "Freelance technical consultant in New Zealand specializing in software development, systems analysis, and IT consulting",
+    "url": "https://www.southernstack.co.nz",
+    "logo": "https://www.southernstack.co.nz/ss-png.png",
+    "founder": {
+      "@type": "Person",
+      "name": "William Clelland"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "NZ",
+      "addressRegion": "Wellington"
+    },
+    "serviceType": [
+      "Software Development",
+      "Systems Analysis & Consulting",
+      "Project Planning & Management",
+      "Business Operations & Process",
+      "Node.js Development",
+      "Web Application Development",
+      "API Development",
+      "Database Design"
+    ],
+    "areaServed": "NZ",
+    "knowsAbout": [
+      "Node.js",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Agile Development",
+      "Technical Leadership"
+    ]
+  }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Southern Stack — IT &amp; Software Consulting NZ</title>
-  <meta name="description" content="Freelance technical consultant based in New Zealand. 10+ years across software development and project leadership — helping businesses build better systems." />
-  <meta name="keywords" content="freelance technical consultant, software development, Node.js, systems analysis, project management, New Zealand, IT consulting" />
+  <meta name="description" content="Freelance technical consultant based in New Zealand. 10+ years across software development, Node.js, systems analysis, project management, IT consulting, and business operations. Helping NZ businesses build better systems and solve technical challenges." />
+  <meta name="keywords" content="freelance technical consultant, software development, Node.js, systems analysis, project management, business operations, IT consulting, technical leadership, New Zealand, Wellington, custom software, web applications, API development, database design, cloud solutions" />
   <meta name="author" content="Southern Stack" />
 
   <!-- Open Graph -->
@@ -25,488 +69,26 @@
   <link rel="icon" type="image/png" href="ss-png.png" />
   <link rel="apple-touch-icon" href="ss-png.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="public, max-age=3600" />
+  <meta http-equiv="Expires" content="Mon, 26 Jul 1997 05:00:00 GMT" />
 
-    :root {
-      --ink: #0c0c0c;
-      --ink-soft: #2a2a2a;
-      --muted: #6b7280;
-      --muted-light: #9ca3af;
-      --border: #e5e2dc;
-      --border-light: #f0ede8;
-      --surface: #f9f8f5;
-      --accent: #1a4f30;
-      --accent-vivid: #226040;
-      --accent-light: #e4efe8;
-      --accent-glow: rgba(26, 79, 48, 0.12);
-      --panel: #0d2318;
-      --panel-mid: #112d1e;
-      --white: #ffffff;
-      --radius-sm: 6px;
-      --radius: 12px;
-      --radius-lg: 20px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--white);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.9rem 2.5rem;
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    }
-    .nav-logo img {
-      height: 38px;
-      width: auto;
-      display: block;
-    }
-    .nav-cta {
-      background: var(--accent);
-      color: var(--white);
-      padding: 0.55rem 1.35rem;
-      border-radius: 100px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      letter-spacing: 0.01em;
-    }
-    .nav-cta:hover {
-      background: var(--accent-vivid);
-      transform: translateY(-1px);
-    }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-top: 62px;
-    }
-
-    /* ── HERO LEFT ── */
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 5rem 3.5rem 5rem 5rem;
-      background: var(--white);
-      position: relative;
-    }
-    .hero-left::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 40%;
-      background: radial-gradient(ellipse 80% 60% at 10% 100%, rgba(26,79,48,0.05) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .eyebrow {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.75rem;
-      display: flex; align-items: center; gap: 0.6rem;
-    }
-    .eyebrow::before {
-      content: '';
-      display: inline-block;
-      width: 28px; height: 2px;
-      background: var(--accent);
-      border-radius: 2px;
-    }
-
-    h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(2.6rem, 3.8vw, 3.75rem);
-      line-height: 1.08;
-      letter-spacing: -0.025em;
-      margin-bottom: 1.75rem;
-      color: var(--ink);
-    }
-    h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .hero-body {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 420px;
-      margin-bottom: 2.75rem;
-      font-weight: 300;
-      line-height: 1.75;
-    }
-
-    .trust-row {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      font-weight: 400;
-    }
-    .trust-icon {
-      width: 20px; height: 20px;
-      background: var(--accent-light);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      color: var(--accent);
-    }
-
-    /* ── HERO RIGHT (dark panel) ── */
-    .hero-right {
-      background: var(--panel);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 3rem 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    /* Subtle dot pattern overlay */
-    .hero-right::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
-      background-size: 28px 28px;
-      pointer-events: none;
-    }
-    /* Top gradient fade from panel */
-    .hero-right::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(34,96,64,0.25) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    /* ── FORM CARD ── */
-    .form-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem 2.25rem;
-      width: 100%;
-      max-width: 420px;
-      position: relative;
-      z-index: 1;
-      box-shadow:
-        0 0 0 1px rgba(0,0,0,0.05),
-        0 4px 6px rgba(0,0,0,0.04),
-        0 20px 60px rgba(0,0,0,0.22);
-      /* min-height prevents layout shift on success */
-      min-height: 500px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-card h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.65rem;
-      margin-bottom: 0.4rem;
-      line-height: 1.2;
-      color: var(--ink);
-    }
-    .form-card > div > p {
-      font-size: 0.875rem;
-      color: var(--muted);
-      margin-bottom: 1.75rem;
-    }
-
-    .field { margin-bottom: 0.9rem; }
-    label {
-      display: block;
-      font-size: 0.775rem;
-      font-weight: 500;
-      margin-bottom: 0.3rem;
-      color: var(--ink-soft);
-      letter-spacing: 0.01em;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.625rem 0.875rem;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.875rem;
-      color: var(--ink);
-      background: var(--white);
-      transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
-      outline: none;
-      -webkit-appearance: none;
-      appearance: none;
-    }
-    input:hover, select:hover, textarea:hover {
-      border-color: #c5c0b8;
-    }
-    input:focus, select:focus, textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-glow);
-      background: #fafffe;
-    }
-    select {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.875rem center;
-      padding-right: 2.5rem;
-      cursor: pointer;
-    }
-    textarea { resize: vertical; min-height: 84px; }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 0.875rem;
-      background: var(--accent);
-      color: var(--white);
-      border: none;
-      border-radius: var(--radius-sm);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.925rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 1.25rem;
-      transition: background 0.2s, transform 0.12s, box-shadow 0.2s;
-      letter-spacing: 0.015em;
-      position: relative;
-      overflow: hidden;
-    }
-    .submit-btn::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.06) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    .submit-btn:hover {
-      background: var(--accent-vivid);
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(26,79,48,0.28);
-    }
-    .submit-btn:active { transform: scale(0.99); }
-    .submit-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
-
-    .form-note {
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--muted-light);
-      margin-top: 0.875rem;
-    }
-
-    /* ── SUCCESS STATE ── */
-    /* Fade via opacity so card size stays constant — prevents scroll jump */
-    #form-inner {
-      transition: opacity 0.35s ease;
-    }
-    #form-inner.fading {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .success-state {
-      position: absolute;
-      inset: 2.5rem 2.25rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 1rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.35s ease 0.2s;
-    }
-    .success-state.visible {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .success-icon {
-      width: 60px; height: 60px;
-      background: var(--accent-light);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--accent);
-    }
-    .success-icon svg { stroke: var(--accent); }
-    .success-state h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.6rem;
-      color: var(--ink);
-    }
-    .success-state p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      max-width: 280px;
-      line-height: 1.65;
-    }
-
-    /* ── SERVICES ── */
-    .services {
-      padding: 7rem 5rem;
-      background: var(--surface);
-      position: relative;
-    }
-    .services-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .services-header {
-      margin-bottom: 3.5rem;
-    }
-    .services-header h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.9rem, 2.8vw, 2.6rem);
-      margin-top: 0.75rem;
-      letter-spacing: -0.02em;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1.5px solid var(--border-light);
-      border-radius: var(--radius);
-      padding: 2rem 1.75rem;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-      cursor: default;
-    }
-    .service-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 6px 32px rgba(26,79,48,0.09);
-      transform: translateY(-2px);
-    }
-    .service-num {
-      font-family: 'DM Serif Display', serif;
-      font-size: 2.25rem;
-      color: var(--accent);
-      opacity: 0.25;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-    .service-card h3 {
-      font-size: 0.975rem;
-      font-weight: 600;
-      margin-bottom: 0.6rem;
-      color: var(--ink);
-    }
-    .service-card p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1.75rem 5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.775rem;
-      color: var(--muted-light);
-      background: var(--white);
-    }
-    footer .footer-logo img {
-      height: 30px;
-      width: auto;
-      display: block;
-      opacity: 0.75;
-    }
-    footer .footer-logo img:hover {
-      opacity: 1;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .hero-left > * {
-      animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
-    .hero-left > *:nth-child(1) { animation-delay: 0.05s; }
-    .hero-left > *:nth-child(2) { animation-delay: 0.15s; }
-    .hero-left > *:nth-child(3) { animation-delay: 0.25s; }
-    .hero-left > *:nth-child(4) { animation-delay: 0.35s; }
-
-    @keyframes cardIn {
-      from { opacity: 0; transform: translateY(20px) scale(0.98); }
-      to   { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    .form-card {
-      animation: cardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-left {
-        padding: 3.5rem 2rem 3rem 2rem;
-        order: 1;
-      }
-      .hero-right {
-        padding: 2.5rem 1.5rem 3rem;
-        order: 2;
-        min-height: auto;
-      }
-      .trust-row { flex-direction: row; flex-wrap: wrap; gap: 0.75rem 1.25rem; }
-      .services { padding: 5rem 2rem; }
-      .services-grid { grid-template-columns: 1fr; gap: 1rem; }
-      footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; }
-      .field-row { grid-template-columns: 1fr; }
-      nav { padding: 0.875rem 1.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 2.4rem; }
-      .hero-left { padding: 2.5rem 1.25rem; }
-      .hero-right { padding: 2rem 1rem 2.5rem; }
-      .form-card { padding: 1.75rem 1.5rem; }
-      .services { padding: 4rem 1.25rem; }
-      footer { padding: 1.25rem; }
-    }
-  </style>
+  <!-- Preload critical resources -->
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//web3forms.com" />
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo"><img src="ss-png.png" alt="Southern Stack" /></div>
+  <div class="nav-logo"><img src="ss-png.png" alt="Southern Stack - IT & Software Consulting" /></div>
   <a href="#register" class="nav-cta">Register interest</a>
 </nav>
+
+<!-- Progress Indicator -->
+<div class="progress-container" id="progress-container" style="display: none;">
+  <div class="progress-bar" id="progress-bar"></div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -554,26 +136,31 @@
             <div class="field">
               <label for="first">First name</label>
               <input type="text" id="first" name="first_name" placeholder="Jane" required />
+              <div class="field-message"></div>
             </div>
             <div class="field">
               <label for="last">Last name</label>
               <input type="text" id="last" name="last_name" placeholder="Smith" required />
+              <div class="field-message"></div>
             </div>
           </div>
 
           <div class="field">
             <label for="email">Email address</label>
             <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            <div class="field-message"></div>
           </div>
 
           <div class="field-row">
             <div class="field">
               <label for="phone">Phone <span style="font-weight:400;color:var(--muted-light)">(optional)</span></label>
               <input type="tel" id="phone" name="phone" placeholder="+64 21 000 0000" />
+              <div class="field-message"></div>
             </div>
             <div class="field">
               <label for="company">Company <span style="font-weight:400;color:var(--muted-light)">(optional)</span></label>
               <input type="text" id="company" name="company" placeholder="Acme Ltd" />
+              <div class="field-message"></div>
             </div>
           </div>
 
@@ -587,15 +174,18 @@
               <option>Business Operations &amp; Process</option>
               <option value="other">Other</option>
             </select>
+            <div class="field-message"></div>
           </div>
           <div class="field" id="other-field" style="display:none">
             <label for="other-service">Please describe what you need</label>
             <input type="text" id="other-service" name="other_service" placeholder="Tell us what you're looking for..." />
+            <div class="field-message"></div>
           </div>
 
           <div class="field">
             <label for="message">Anything else you'd like to share?</label>
             <textarea id="message" name="message" placeholder="Tell us about your project or goals..."></textarea>
+            <div class="field-message"></div>
           </div>
 
           <div class="h-captcha" data-captcha="true" style="margin-top:0.75rem"></div>
@@ -648,56 +238,227 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><img src="ss-png.png" alt="Southern Stack" /></div>
+  <div class="footer-logo"><img src="ss-png.png" alt="Southern Stack - IT & Software Consulting" /></div>
   <div>&copy; 2026 Southern Stack Ltd. All rights reserved.</div>
 </footer>
 
 <script>
-  document.getElementById('service').addEventListener('change', function () {
-    document.getElementById('other-field').style.display = this.value === 'other' ? 'block' : 'none';
-  });
+  // Error boundary wrapper
+  class ErrorBoundary {
+    static wrap(fn) {
+      return function(...args) {
+        try {
+          return fn.apply(this, args);
+        } catch (error) {
+          console.error('Error caught by boundary:', error);
+          // Show user-friendly error message
+          showErrorMessage('Something went wrong. Please refresh the page and try again.');
+          return undefined;
+        }
+      };
+    }
+  }
 
-  const form = document.getElementById('interest-form');
-  const btn = document.getElementById('submit-btn');
-  const formInner = document.getElementById('form-inner');
-  const successState = document.getElementById('success-state');
+  // Utility functions
+  function showErrorMessage(message) {
+    // Create or update error message display
+    let errorDiv = document.getElementById('global-error');
+    if (!errorDiv) {
+      errorDiv = document.createElement('div');
+      errorDiv.id = 'global-error';
+      errorDiv.style.cssText = `
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #dc2626;
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        z-index: 1001;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-size: 0.9rem;
+        max-width: 90vw;
+      `;
+      document.body.appendChild(errorDiv);
+    }
+    errorDiv.textContent = message;
+    errorDiv.style.display = 'block';
+    setTimeout(() => {
+      errorDiv.style.display = 'none';
+    }, 5000);
+  }
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  function updateProgress(percent) {
+    const progressContainer = document.getElementById('progress-container');
+    const progressBar = document.getElementById('progress-bar');
 
-    const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
-    if (!hCaptcha || !hCaptcha.value) {
-      alert('Please complete the captcha to continue.');
-      return;
+    if (percent > 0) {
+      progressContainer.style.display = 'block';
+      progressBar.style.width = percent + '%';
+    } else {
+      progressContainer.style.display = 'none';
+    }
+  }
+
+  function validateField(field) {
+    const input = field.querySelector('input, select, textarea');
+    const message = field.querySelector('.field-message');
+    let isValid = true;
+    let errorMessage = '';
+
+    // Remove previous validation classes
+    field.classList.remove('error', 'success');
+
+    // Check required fields
+    if (input.hasAttribute('required') && !input.value.trim()) {
+      isValid = false;
+      errorMessage = 'This field is required';
     }
 
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
-      });
-      const json = await res.json();
-
-      if (json.success) {
-        // Fade out form, fade in success — no layout shift, no scroll jump
-        formInner.classList.add('fading');
-        setTimeout(() => {
-          successState.classList.add('visible');
-        }, 200);
-      } else {
-        throw new Error('Submission failed');
+    // Email validation
+    if (input.type === 'email' && input.value.trim()) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(input.value.trim())) {
+        isValid = false;
+        errorMessage = 'Please enter a valid email address';
       }
-    } catch {
-      btn.disabled = false;
-      btn.textContent = 'Register my interest \u2192';
-      alert('Something went wrong. Please try again.');
     }
-  });
+
+    // Phone validation (optional but if provided, should be reasonable)
+    if (input.type === 'tel' && input.value.trim()) {
+      const phoneRegex = /^[\+]?[0-9\s\-\(\)]{8,}$/;
+      if (!phoneRegex.test(input.value.trim())) {
+        isValid = false;
+        errorMessage = 'Please enter a valid phone number';
+      }
+    }
+
+    // Minimum length for names
+    if ((input.id === 'first' || input.id === 'last') && input.value.trim().length < 2) {
+      isValid = false;
+      errorMessage = 'Name must be at least 2 characters';
+    }
+
+    // Update field state
+    if (!isValid) {
+      field.classList.add('error');
+      message.textContent = errorMessage;
+    } else if (input.value.trim()) {
+      field.classList.add('success');
+      message.textContent = '';
+    } else {
+      message.textContent = '';
+    }
+
+    return isValid;
+  }
+
+  function validateForm() {
+    const fields = document.querySelectorAll('.field');
+    let allValid = true;
+
+    fields.forEach(field => {
+      if (!validateField(field)) {
+        allValid = false;
+      }
+    });
+
+    return allValid;
+  }
+
+  // Initialize form functionality
+  document.addEventListener('DOMContentLoaded', ErrorBoundary.wrap(() => {
+    const serviceSelect = document.getElementById('service');
+    const otherField = document.getElementById('other-field');
+    const form = document.getElementById('interest-form');
+    const btn = document.getElementById('submit-btn');
+    const formInner = document.getElementById('form-inner');
+    const successState = document.getElementById('success-state');
+
+    // Service selection handler
+    serviceSelect.addEventListener('change', function () {
+      otherField.style.display = this.value === 'other' ? 'block' : 'none';
+    });
+
+    // Real-time validation
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        const field = input.closest('.field');
+        validateField(field);
+      });
+
+      input.addEventListener('input', () => {
+        const field = input.closest('.field');
+        // Clear error state on input
+        if (field.classList.contains('error')) {
+          validateField(field);
+        }
+      });
+    });
+
+    // Form submission
+    form.addEventListener('submit', ErrorBoundary.wrap(async (e) => {
+      e.preventDefault();
+
+      // Validate all fields
+      if (!validateForm()) {
+        showErrorMessage('Please correct the errors above and try again.');
+        return;
+      }
+
+      // Check captcha
+      const hCaptcha = form.querySelector('textarea[name=h-captcha-response]');
+      if (!hCaptcha || !hCaptcha.value) {
+        showErrorMessage('Please complete the captcha to continue.');
+        return;
+      }
+
+      // Update UI for loading state
+      btn.disabled = true;
+      btn.innerHTML = '<div class="spinner"></div> Sending...';
+      updateProgress(25);
+
+      const data = new FormData(form);
+
+      try {
+        updateProgress(50);
+
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: data
+        });
+
+        updateProgress(75);
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const json = await res.json();
+
+        updateProgress(100);
+
+        if (json.success) {
+          // Success animation
+          formInner.classList.add('fading');
+          setTimeout(() => {
+            successState.classList.add('visible');
+            updateProgress(0);
+          }, 200);
+        } else {
+          throw new Error(json.message || 'Submission failed');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        btn.disabled = false;
+        btn.innerHTML = 'Register my interest &rarr;';
+        updateProgress(0);
+        showErrorMessage('Something went wrong. Please check your connection and try again.');
+      }
+    }));
+  }));
 </script>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
