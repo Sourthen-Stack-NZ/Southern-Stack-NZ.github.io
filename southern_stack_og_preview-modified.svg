@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 904.41406 232.99998"
+   width="904.41406"
+   version="1.1"
+   id="svg14"
+   height="232.99998"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6" />
+  <!-- Background -->
+  <!-- Subtle grid lines for depth -->
+  <!-- Accent bar left -->
+  <!-- Logo triangle group — centred left half -->
+  <!-- Back triangle (dark blue) -->
+  <polygon
+     points="220,310 340,115 460,310 "
+     fill="#1a5fa8"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#1a5fa8;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="polygon8"
+     transform="translate(-220,-115)" />
+  <!-- Mid triangle (medium blue) -->
+  <polygon
+     points="240,305 340,145 440,305 "
+     fill="#2176c7"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#2176c7;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="polygon9"
+     transform="translate(-220,-115)" />
+  <!-- Front triangle (light blue) -->
+  <polygon
+     points="260,300 340,185 420,300 "
+     fill="#5aabdc"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#5aabdc;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="polygon10"
+     transform="translate(-220,-115)" />
+  <!-- SS badge -->
+  <rect
+     x="90"
+     y="202.99998"
+     width="62"
+     height="30"
+     rx="15"
+     fill="#1a6bbf"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#1a6bbf;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="rect10" />
+  <text
+     x="121"
+     y="222.99998"
+     text-anchor="middle"
+     font-family="Arial, sans-serif"
+     font-size="14"
+     font-weight="700"
+     fill="#ffffff"
+     style="color:#ffffff;font-weight:700;font-size:14px;font-family:Arial, sans-serif;dominant-baseline:auto;text-anchor:middle;opacity:1;fill:#ffffff;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="text10">SS</text>
+  <!-- Divider -->
+  <line
+     x1="320"
+     y1="65.619576"
+     x2="320"
+     y2="186.87111"
+     stroke="#ccd4de"
+     stroke-width="1.5"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#000000;stroke:#ccd4de;stroke-width:0.938111px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="line10" />
+  <!-- Right: text block -->
+  <!-- Company name -->
+  <text
+     x="390"
+     y="81.245354"
+     font-family="Arial, sans-serif"
+     font-size="72"
+     font-weight="700"
+     fill="#1a2e45"
+     letter-spacing="-1"
+     style="color:#ffffff;font-weight:700;font-size:72px;font-family:Arial, sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#1a2e45;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="text11">Southern Stack</text>
+  <!-- Tagline -->
+  <text
+     x="392"
+     y="129.24535"
+     font-family="Arial, sans-serif"
+     font-size="28"
+     font-weight="400"
+     fill="#4a6480"
+     letter-spacing="1"
+     style="color:#ffffff;font-weight:400;font-size:28px;font-family:Arial, sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#4a6480;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="text12">IT &amp; Software Consulting</text>
+  <!-- Divider line -->
+  <line
+     x1="392"
+     y1="155.24535"
+     x2="840"
+     y2="155.24535"
+     stroke="#1a6bbf"
+     stroke-width="2"
+     style="color:#ffffff;font-weight:400;font-size:16px;font-family:'Anthropic Sans', '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#000000;stroke:#1a6bbf;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="line12" />
+  <!-- Sub-tagline -->
+  <text
+     x="392"
+     y="193.24535"
+     font-family="Arial, sans-serif"
+     font-size="22"
+     font-weight="400"
+     fill="#5a7a96"
+     style="color:#ffffff;font-weight:400;font-size:22px;font-family:Arial, sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#5a7a96;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="text13">Helping businesses build better systems</text>
+  <!-- Bottom domain hint -->
+</svg>
